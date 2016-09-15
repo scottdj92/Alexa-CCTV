@@ -1,0 +1,30 @@
+{
+  "name": "alexa-cctv",
+  "version": "1.0.0",
+  "description": "Using hls.js to recreate a stream based on a docker volume that's updated by a Raspberry Pi",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test",
+    "build-css" : "node-sass main.scss main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scottdj92/Alexa-CCTV.git"
+  },
+  "keywords": [
+    "npm",
+    "raspeberry",
+    "pi",
+    "js",
+    "javascript"
+  ],
+  "author": "Scott Jones",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/scottdj92/Alexa-CCTV/issues"
+  },
+  "homepage": "https://github.com/scottdj92/Alexa-CCTV#readme",
+  "devDependencies": {
+    "node-sass": "^3.10.0"
+  }
+}

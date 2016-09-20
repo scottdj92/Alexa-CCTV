@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run test",
-    "build-css" : "node-sass main.scss main.css"
+    "build-css" : "node-sass ./main.scss ./main.css"
   },
   "repository": {
     "type": "git",

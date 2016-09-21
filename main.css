@@ -6,6 +6,15 @@
   100% {
     opacity: 0; } }
 
+@keyframes destroyed {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0.5; }
+  100% {
+    opacity: 0;
+    display: none; } }
+
 html {
   font-family: "Fira Code", monospace;
   background-color: #070211; }
@@ -28,3 +37,7 @@ html {
 
 .right {
   float: right; }
+
+.killed {
+  animation: destroyed 4s;
+  animation-iteration-count: 1; }

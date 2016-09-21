@@ -20,7 +20,16 @@ var input = (data) => {
 
 generateFailure = () => {
     noise(ctx);
+    shutDown();
     killed = true;
+}
+
+shutDown = () => {
+    var videos = document.getElementsByClassName('video');
+
+    for (var i = 0; i < videos.length; i++) {
+        videos[i].classList.add('killed');
+    }
 }
 
 resize = () => {

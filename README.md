@@ -15,7 +15,7 @@ A camera feed using hls.js
 
 3.  Do dev work.
 
-4.  The local volume will be synced with the docker instance and will update whenever you push in your code.
+4.  The local code will need to be updated using the `cp <localfile.txt> <container>:<remotefile.txt>` command.
 
 #### Development workflow
 1.  Do your code as normal in the HTML/Sass/js files.

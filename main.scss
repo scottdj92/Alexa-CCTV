@@ -4,22 +4,32 @@
     100% { opacity: 0; }
 }
 
+
+html {
+    font-family: "Fira Code", monospace;
+    background-color: rgb(7, 2, 17);
+}
+
 .status {
-    animation: loading 5s infinite;
+    width: 49%;
+    height: 50%;
+    float: right;
+    color: rgb(225, 234, 237);
+    h1 {
+        animation: loading 5s infinite;
+    }
+}
+
+.hidden {
+    display: none;
 }
 
 .video {
-    &--video1 {
-        width: 25%;
-        height: 50%;
-    }
-    &--video2 {
-        width: 25%;
-        height: 50%;
-    }
-    &--video3 {
-        width:25%;
-        height: 50%;
-        float: right;
-    }
+    border: solid red;
+    width: 49%;
+    height: 50%;
+}
+
+.right {
+    float: right;
 }

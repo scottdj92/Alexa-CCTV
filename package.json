@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run test",
-    "build-css" : "node-sass ./main.scss ./main.css"
+    "build-css": "node-sass ./main.scss ./main.css",
+    "watch-css": "nodemon -e scss --watch main.scss -x \"npm run build-css\""
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
   },
   "homepage": "https://github.com/scottdj92/Alexa-CCTV#readme",
   "devDependencies": {
-    "node-sass": "^3.10.0"
+    "node-sass": "^3.10.0",
+    "nodemon": "^1.10.2"
   }
 }

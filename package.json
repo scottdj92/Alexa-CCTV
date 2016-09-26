@@ -28,5 +28,8 @@
   "devDependencies": {
     "node-sass": "^3.10.0",
     "nodemon": "^1.10.2"
+  },
+  "dependencies": {
+    "rpio": "^0.9.12"
   }
 }

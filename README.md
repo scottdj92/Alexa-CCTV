@@ -11,7 +11,7 @@ A camera feed using hls.js
 ## Steps to recreate
 1.  First, set up your docker image. I used Nginx, which supports RTMP and HTTP requests.
 
-2.  Mount your local volume to the docker instance and make sure nginx is configired to serve `index.html` as the root. This will also solve any port issues.
+2.  Mount your local volume to the docker instance and make sure nginx is configured to serve `index.html` as the root. This will also solve any port issues.
 
 3.  Do dev work.
 

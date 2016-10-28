@@ -102,7 +102,7 @@ reboot = () => {
 (function () {
 
     navigator.mediaDevices.getUserMedia(
-        {video: {height: 480, width: 640}, audio: false})
+        {video: {height: 150, width: 300}, audio: false})
         .then(function(mediaStream) {
             let video = document.getElementsByTagName('video')[1];
 

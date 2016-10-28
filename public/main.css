@@ -23,6 +23,9 @@ html {
   width: 49%;
   height: 50%;
   float: right;
+  position: absolute;
+  left: 61em;
+  top: 35em;
   color: #e1eaed; }
   .status h1 {
     animation: loading 5s infinite; }
@@ -34,6 +37,8 @@ html {
   border: solid red;
   width: 49%;
   height: 50%; }
+  .video.webcam {
+    height: 500px; }
 
 .lost h4 {
   position: relative;

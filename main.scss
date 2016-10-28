@@ -20,6 +20,9 @@ html {
     width: 49%;
     height: 50%;
     float: right;
+    position: absolute;
+    left: 61em;
+    top: 35em;
     color: rgb(225, 234, 237);
     h1 {
         animation: loading 5s infinite;
@@ -38,6 +41,10 @@ html {
     border: solid red;
     width: 49%;
     height: 50%;
+
+    &.webcam {
+        height: 500px;
+    }
 }
 
 .lost {

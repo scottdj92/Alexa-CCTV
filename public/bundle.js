@@ -47,8 +47,6 @@ shutDown = () => {
     for (var i = 0; i < videos.length; i++) {
         videos[i].classList.add('killed');
     }
-
-    $('.video').addClass('hidden');
 }
 
 resize = () => {
@@ -75,6 +73,7 @@ noise = () => {
 
 reboot = () => {
     $('.reboot').removeClass('hidden');
+    $('.video').addClass('hidden');
 
     window.setTimeout(function() {
         killed = false;

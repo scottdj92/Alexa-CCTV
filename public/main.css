@@ -39,5 +39,4 @@ html {
   float: right; }
 
 .killed {
-  animation: destroyed 4s;
-  animation-iteration-count: 1; }
+  animation: destroyed 4s; }

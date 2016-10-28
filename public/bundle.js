@@ -5,36 +5,41 @@ require('./webcam');
 // Get reference to canvas
 var canvas = document.getElementById('canvas'),
     ctx = canvas.getContext('2d'),
-    killed = false;
+    killed = false,
+    pressed;
 
 
 document.addEventListener("keydown", function(event) {
     if (event.which === 32) {
         event.preventDefault();
         console.log(event.which);
-        verifyKill(event.which);
+        pressed = event.which;
     }
 });
+
+document.addEventListener('keyup', function(event) {
+    if (event.which === 32) {
+        event.preventDefault();
+    }
+})
 // if we receive an input from the button, send a kill message command and hide the feeds.
 
 // get input and test whether or not it is on or off
 verifyKill = (keyCode) => {
     if(keyCode === 32) {
+        killed = true;
         $('.video').addClass('killed');
         $('.status').addClass('killed');
         //generate static noise
         generateFailure();
     } else {
-        // do nothing
         killed = false;
-        return;
     }
 };
 
 generateFailure = () => {
     noise(ctx);
     shutDown();
-    killed = true;
 
     window.setTimeout(reboot, 5000);
 }
@@ -76,6 +81,8 @@ reboot = () => {
 }
 
 (function loop() {
+    console.log(killed);
+    verifyKill(pressed);
     if(killed) {
         noise(ctx);
     }

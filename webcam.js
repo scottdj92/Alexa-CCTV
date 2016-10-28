@@ -3,7 +3,7 @@
 (function () {
 
     navigator.mediaDevices.getUserMedia(
-        {video: {height: 720, width: 1280}, audio: false})
+        {video: {height: 480, width: 640}, audio: false})
         .then(function(mediaStream) {
             let video = document.getElementsByTagName('video')[1];
 

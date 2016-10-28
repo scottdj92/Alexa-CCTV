@@ -35,8 +35,13 @@ html {
   width: 49%;
   height: 50%; }
 
+.lost h4 {
+  position: relative;
+  top: -2em;
+  right: 2em; }
+
 .right {
   float: right; }
 
 .killed {
-  animation: destroyed 4s; }
+  animation: destroyed 5s; }

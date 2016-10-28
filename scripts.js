@@ -46,6 +46,8 @@ shutDown = () => {
     for (var i = 0; i < videos.length; i++) {
         videos[i].classList.add('killed');
     }
+
+    $('.video').addClass('hidden');
 }
 
 resize = () => {
@@ -56,7 +58,7 @@ resize = () => {
 resize();
 window.onresize = resize;
 
-noise = (ctx) => {
+noise = () => {
     var w = ctx.canvas.width,
         h = ctx.canvas.height,
         idata = ctx.createImageData(w, h),
@@ -72,11 +74,17 @@ noise = (ctx) => {
 
 reboot = () => {
     $('.reboot').removeClass('hidden');
-    killed = false;
-    $('.reboot').addClass('hidden');
 
-    $('.video').removeClass('killed');
-    $('.status').removeClass('killed');
+    window.setTimeout(function() {
+        killed = false;
+
+        window.setTimeout(function() {
+            $('.reboot').addClass('hidden');
+            $('.video').removeClass('killed');
+            $('.video').removeClass('hidden');
+            $('.status').removeClass('killed');
+        }, 2000);
+    }, 10000);
 }
 
 (function loop() {

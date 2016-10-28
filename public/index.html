@@ -4,6 +4,10 @@
         <meta charset="utf-8">
         <title>ALEXA CCTV FEED</title>
         <link rel="stylesheet" href="main.css" media="screen" title="no title">
+        <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
     </head>
     <body>
         <video class='video'src="" autoplay>
@@ -22,8 +26,9 @@
             <h1>Now Monitoring ...</h1>
         </div>
         <canvas id="canvas" class="hidden"></canvas>
+        <div class="reboot hidden">
+            <h4>ALEXA Rebooting...</h4>
+        </div>
     </body>
-    <script src="scripts.js" type="text/javascript" charset="utf-8"></script>
-    <script src="pi.js" type="text/javascript" charset="utf-8"></script>
-    <script src="webcam.js" type="text/javascript" charset="utf-8"></script>
+    <script src="bundle.js" type="text/javascript" charset="utf-8"></script>
 </html>

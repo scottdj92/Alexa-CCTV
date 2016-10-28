@@ -2,11 +2,13 @@
   "name": "alexa-cctv",
   "version": "1.0.0",
   "description": "Using hls.js to recreate a stream based on a docker volume that's updated by a Raspberry Pi",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "npm run test",
-    "build-css": "node-sass ./main.scss ./main.css",
-    "watch-css": "nodemon -e scss --watch main.scss -x \"npm run build-css\""
+    "build-css": "node-sass ./main.scss ./public/main.css",
+    "watch-css": "nodemon -e scss --watch main.scss -x \"npm run build-css\"",
+    "start": "npm run build-js && npm run build-css && node server.js",
+    "build-js": "browserify scripts.js -o ./public/bundle.js"
   },
   "repository": {
     "type": "git",
@@ -26,10 +28,17 @@
   },
   "homepage": "https://github.com/scottdj92/Alexa-CCTV#readme",
   "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.18.0",
+    "browserify": "^13.1.1",
+    "cylon": "^1.3.0",
+    "cylon-firmata": "^0.24.0",
+    "cylon-gpio": "^0.29.0",
+    "cylon-i2c": "^0.26.1",
     "node-sass": "^3.10.0",
     "nodemon": "^1.10.2"
   },
   "dependencies": {
-    "rpio": "^0.9.12"
+    "express": "^4.14.0"
   }
 }

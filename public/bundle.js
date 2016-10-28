@@ -9,18 +9,15 @@ var canvas = document.getElementById('canvas'),
     pressed;
 
 
-document.addEventListener("keydown", function(event) {
+document.addEventListener("keypress", function(event) {
     if (event.which === 32) {
         event.preventDefault();
-        console.log(event.which);
         pressed = event.which;
     }
 });
 
 document.addEventListener('keyup', function(event) {
-    if (event.which === 32) {
-        event.preventDefault();
-    }
+    pressed = null;
 })
 // if we receive an input from the button, send a kill message command and hide the feeds.
 
@@ -78,6 +75,9 @@ reboot = () => {
     $('.reboot').removeClass('hidden');
     killed = false;
     $('.reboot').addClass('hidden');
+
+    $('.video').removeClass('killed');
+    $('.status').removeClass('killed');
 }
 
 (function loop() {
